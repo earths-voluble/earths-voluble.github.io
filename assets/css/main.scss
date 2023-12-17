@@ -1,0 +1,14 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Scotch Display'; // 원하는 폰트 이름으로 변경
+    src: url('https://use.typekit.net/jdt3yut.css') format('css'); // 어도비에서 제공하는 CSS 파일 링크
+    font-weight: normal;
+    font-style: normal;
+}
+
