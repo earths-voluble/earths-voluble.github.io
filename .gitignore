@@ -20,3 +20,9 @@ package-lock.json
 
 # Misc
 assets/js/dist
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
