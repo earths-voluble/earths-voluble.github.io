@@ -14,7 +14,7 @@ tags: [swift]     # TAG names should always be lowercase
 ---
 
 
-# ```for-in```문
+# for-in문
 >`for-in`구문은 반복적인 데이터나 시퀀스를 다룰 때 유용하다.
 
 
@@ -43,7 +43,7 @@ for company in companies {
 
 
 
-# ```while```문
+# while문
 > `Bool`타입으로 지정된 특정 조건이 성립하는 한 내부의 코드를 반복해서 실행한다.
 
 ```swift
@@ -55,7 +55,7 @@ while number < 3
 
 
 
-# ```repeat-while```문
+# repeat-while문
 >```repeat```중괄호 내부의 코드는 조건식에 맞지 않더라도 한번은 무조건 실행한다.
 
 ```swift
