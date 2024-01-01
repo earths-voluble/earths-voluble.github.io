@@ -117,6 +117,8 @@ print(areYouSure!) // 크래시
 ```
 다만 로직상 `Optional`이 반드시 값을 가지고 있을 수밖에 없는 등 확신이 있다면 편리하게 사용할 수도 있다.
 
+---
+
 ### Implicitly Unwrapped Optional(IUO)
 *암시적 추출 옵셔널*
 
