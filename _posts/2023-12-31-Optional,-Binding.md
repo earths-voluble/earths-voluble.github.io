@@ -6,8 +6,8 @@ tags: [swift,문법]     # TAG names should always be lowercase
 ---
 
 ## Optional
-> A type that represents either a wrapped value or the absence of a value.
-값 혹은 비어있는 값을 나타내는, 싸여있는(래핑된)타입
+> A type that represents either a wrapped value or the absence of a value. 
+> 값 혹은 비어있는 값을 나타내는, 싸여있는(래핑된)타입
 {: .prompt-tip }
 
 ### 왜 Optional?
@@ -21,21 +21,21 @@ tags: [swift,문법]     # TAG names should always be lowercase
 
 ### Optional Binding
 - `if let` 바인딩
-```
+```swift
 let bindMe: Optional<Int> = Int(1)
 if let bound = bindMe {
 	print(bound)
 } // 1
 ```
 이와 같이 `Optional` 값의 래핑을 벗겨서 사용할 수 있으며
-```
+```swift
 let bindMe: Optional<Int> = Int(1)
 if let bindMe = bindMe {
 		print(bindMe)
 } // 1
 ```
 이렇게 같은 이름을 사용해도 되고,
-```
+```swift
 let bindMe: Optional<Int> = Int(1)
 if let bindMe {
 		print(bindMe)
@@ -47,7 +47,7 @@ Swift 5.7부터는 이렇게 `=`연산자를 생략하고 사용할 수도 있�
 `guard let` 바인딩은 함수 내에서만 사용 가능하다. ->
 함수의 조건을 검사하는 용도인 guard의 특성상 guard let 역시 함수 내에서만 사용 가능하고, return, throw, break, continue 등의 제어문 전환 명령어가 필요기 때문이다.
 
-```
+```swift
 let bindMe: Optional<Int> = Int(1)
 func illBindYou(_ who: Optional<Int>) {
     guard let bindMe = bindMe else { return }
@@ -56,7 +56,7 @@ func illBindYou(_ who: Optional<Int>) {
 illBindYou(bindMe) // 1
 ```
 
-```
+```swift
 let bindMe: Optional<Int> = Int(1)
 func illBindYou(_ who: Optional<Int>) {
     guard let bindMe else { return }
@@ -72,7 +72,7 @@ illBindYou(bindMe) // 1
 좌항이 `nil`이 아닐 경우 좌항을 할당하고, 좌항이 `nil`일 경우에는 우항을 할당한다.
 `nil-Coalescing`을 사용하면 옵셔널 값이 비어있을 경우를 위한 기본값을 설정하기 좋다.
 
-```
+```swift
 let nilCoalesceLhs: Optional<Int> = 1
 let nilCoalesceRhs: Optional<Int> = nil
 
@@ -85,7 +85,7 @@ print(coalesceRhs) // 2
 
 `??` 연산자는 오른쪽에 위치한 다른 옵셔널 값과도 작동하기 때문에, 여러 개의 `??` 연산자를 함께 사용할 수도 있다.
 
-```
+```swift
 let coalesceFirst: Optional<Int> = nil
 let coalesceSecond: Optional<Int> = nil
 
@@ -98,7 +98,7 @@ print(coalesceChain) // 3
 ### Unconditional Unwrap
 *일명 강제 언래핑*
 단순히 `Optional` 값의 뒤에 `!`를 붙임으로써 사용할 수 있다.
-```
+```swift
 let soSimple: Optional<Int> = 1
 print(soSimple!) // 1
 ```
@@ -106,7 +106,7 @@ print(soSimple!) // 1
 하지만 만약 `Optional`이 값을 가지고 있지 않을 경우, 즉시 런타임 오류가 발생한다.
 안전성을 위한 `Optional`을 간단하게 풀어버리는 만큼, 안전성을 포기하는 언래핑 방법이라고 할 수 있다.
 
-```
+```swift
 let areYouSure: Optional<Int> = nil
 print(areYouSure!) // 크래시
 ```
@@ -119,7 +119,7 @@ print(areYouSure!) // 크래시
 
 IUO로 지정된 타입은 일반 값처럼 사용할 수 있으나, nil을 할당할 수도 있다. 하지만 nil이 할당되어 있을 때 접근하면 런타임 오류가 발생한다.
 
-```
+```swift
 var bornToWrap: String! = "good"
 print(bornToWrap) // good
 
