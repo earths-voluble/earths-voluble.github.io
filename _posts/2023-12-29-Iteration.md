@@ -2,7 +2,7 @@
 title: 반복문Iteration
 date: 2023-12-29 02:29:46 +0900
 categories: [DEVELOPMENT, SWIFT]
-tags: [swift]     # TAG names should always be lowercase
+tags: [swift, 문법]     # TAG names should always be lowercase
 ---
 
 > 배열과 같이 순서가 있는 데이터는 반복문으로 쉽게 처리할 수 있다.
