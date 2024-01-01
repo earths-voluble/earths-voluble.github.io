@@ -67,6 +67,8 @@ illBindYou(bindMe) // 1
 
 `if let` 바인딩과 마찬가지로 `=` 연산자는 생략할 수 있다.
 
+---
+
 ### nil-Coalescing
 옵셔널 값이 `nil`일 경우를 대비해서 `nil-coalescing` 연산자(`??`)를 사용한다. 
 좌항이 `nil`이 아닐 경우 좌항을 할당하고, 좌항이 `nil`일 경우에는 우항을 할당한다.
@@ -95,8 +97,11 @@ let coalesceChain = coalesceFirst ?? coalesceSecond ?? Int(3)
 print(coalesceChain) // 3
 ```
 
+---
+
 ### Unconditional Unwrap
 *일명 강제 언래핑*
+
 단순히 `Optional` 값의 뒤에 `!`를 붙임으로써 사용할 수 있다.
 ```swift
 let soSimple: Optional<Int> = 1
