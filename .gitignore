@@ -26,3 +26,6 @@ assets/js/dist
 .DS_Store
 .AppleDouble
 .LSOverride
+
+# Paulog
+.obsidian
