@@ -18,7 +18,7 @@ tags: [swift]     # TAG names should always be lowercase
 
 Fix를 누르면,
 
-```Swift
+```swift
 extension Date: @retroactive RawRepresentable
 ```
 단순히 프로토콜 앞에 `@retroactive` 어트리뷰트가 추가되고, 경고는 사라진다.
@@ -32,7 +32,7 @@ https://github.com/swiftlang/swift-evolution/blob/main/proposals/0364-retroactiv
 
 제안자는 말한다.
 _어떤 라이브러리가 핵심 API 중 하나로 `Date`가 컬렉션의 요소를 identity를 기준으로 비교하는 API와 함께 사용하기 위해 `Identifiable`을 준수하도록 선언했다고 가정해보자._
-```Swift
+```swift
 extension Date: Identifiable {
   public var id: TimeInterval { timeIntervalSince1970 }
 }
