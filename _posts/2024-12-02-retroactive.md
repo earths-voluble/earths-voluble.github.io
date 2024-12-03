@@ -1,5 +1,5 @@
 ---
-title: 제네릭Generics
+title: Swift - 버전 6의 새 어트리뷰트 @retroactive
 date: 2024-12-02 18:41:28 +0900
 categories: [SWIFT]
 tags: [swift]     # TAG names should always be lowercase
